@@ -8,7 +8,7 @@
   {
     "id": 2,
     "name": "Donkey Kong",
-    "image": ".images/donkey.png",
+    "image": "./images/donkey.png",
     "clicked": false
   },
   {
