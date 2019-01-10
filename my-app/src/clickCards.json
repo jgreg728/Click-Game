@@ -301,8 +301,8 @@
   },
   {
     "id": 51,
-    "name": "Mii Swordsman",
-    "image": "./images/miiSwordsman.png",
+    "name": "Mii Swordfighter",
+    "image": "./images/miiSwordfighter.png",
     "clicked": false
   },
   {
