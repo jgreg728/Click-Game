@@ -64,27 +64,15 @@ class App extends Component {
           return fighter;
         })
 
+        alert("GAME OVER...")
+
         this.setState({
           smashList: this.shuffleFighters(resetSmashList),
           currentScore: 0
         })
       }  
       
-      // Apply above to the click itself
-      // clickResult = (currentScore) => {
-      //       this.state.currentScore(() => {
-      //         if (handleCorrectGuess = true) {
-      //           return (
-      //             this.setState.currentScore()
-      //           )
-      //         }
-      //         else (
-      //           return (
-      //             this.handleIncorrectGuess()
-      //           )
-      //         )
-      //       })
-      //     }
+   
 
       // SHUFFLE FIGHTERS PER CLICK
       componentDidMount() {
@@ -112,37 +100,25 @@ class App extends Component {
     return (
       <div>
         <Header>
-          <h1>Smash Ultimate Memory Game</h1>
-          <img src="./public/images/smash_logo.png"></img>
+          <h1>Super Smash Bros. Ultimate Memory Game</h1>
+          <img className="smashLogo" src="/images/smash_logo.png"></img>
           <h3 className="title">Keep clicking on fighters without selecting the same one more than once!</h3>
 
-          <h3>{this.state.currentScore} </h3>
-          {/* {
-            this.state.currentScore(() => {
-              if (handleCorrectGuess = true) {
-                return (
-                  this.setState.currentScore()
-                )
-              }
-              else (
-                return (
-                  this.handleIncorrectGuess()
-                )
-              )
-            })
-          } */}
+          <h1>Score: {this.state.currentScore} </h1>
+          <h1>Top Score: {this.state.topScore} </h1>
         </Header>
 
         <Wrapper>
        
         {
           this.state.smashList.map((fighter, i) => {
-            if (i < 9) {
+            if (i < 10) {
             return (
             <ClickCard
             key={fighter.id}
             name={fighter.name}
             image={fighter.image}
+            id={fighter.id}
 
             clickedCard={this.handleCardClick}
             />  
@@ -150,7 +126,7 @@ class App extends Component {
         }
       })
         
-       };
+       }
     </Wrapper>
       </div>
       
